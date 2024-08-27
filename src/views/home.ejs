@@ -1,0 +1,23 @@
+<main>
+	<h2>2024 released Game</h2>
+	<form>
+		<label for="search">Search a game :</label>
+		<input type="search" name="search" id="search" />
+	</form>
+
+	<div id="results">
+		<% for(const game of games) { %>
+		<article>
+			<h3><%= game.name %></h3>
+
+			<p>
+				Released : <%= new Date(game.released).toLocaleDateString() %>
+			</p>
+			<p>Rating : <%= game.rating %></p>
+		</article>
+		<hr />
+		<% } %>
+	</div>
+</main>
+
+<script src="/js/home.js"></script>

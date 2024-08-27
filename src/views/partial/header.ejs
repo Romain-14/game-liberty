@@ -1,0 +1,12 @@
+<header>
+	<h1>GAME LIBERTY by RAWG API</h1>
+	<nav>
+        <!-- ici isActive est une fonction stocké dans l'objet locals d'express (voir fichier app.js) -->
+		<a href="/" class="<%= isActive('/') %>">Home</a>
+		<a href="/login" class="<%= isActive('/login') %>">login</a>
+
+        
+		<a href="/dashboard" class="<%= isActive('/dashboard') %>">dashboard</a>
+		<a href="/logout">logout</a>
+	</nav>
+</header>

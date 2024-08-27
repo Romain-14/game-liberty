@@ -1,0 +1,20 @@
+<main>
+    <h2>Dashboard</h2>
+
+    <p>Welcome <%= user.username %></p>
+
+    
+
+    <section>
+        <h3>Video game list</h3>
+        <% for(const game of games) { %>
+        <article>
+            <h4><%= game.name %></h4>
+            <p>
+                Released : <%= new Date(game.released).toLocaleDateString() %>
+            </p>
+            <p>Rating : <%= game.rating %></p>
+        </article>
+        <% } %>
+    </section>
+</main>
